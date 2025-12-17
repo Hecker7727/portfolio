@@ -183,6 +183,51 @@ export const projects = [
       { id: 3, name: "JavaScript" },
     ],
   },
+  {
+    id: 11,
+    name: "Outpost Design Website Clone",
+    description:
+      "A modern, responsive clone of the Outpost Design website, showcasing advanced front-end development skills including animations, responsiveness, and sleek UI design.",
+    href: "https://github.com/Jayeshpatil9869/Outpost-Project",
+    image: "/images/Outpost.png",
+    bgImage: "/images/Outpost.png",
+    frameworks: [
+      { id: 1, name: "HTML5" },
+      { id: 2, name: "CSS3 & SASS" },
+      { id: 3, name: "JavaScript" },
+      { id: 4, name: "GSAP" },
+    ],
+  },
+  {
+    id: 12,
+    name: "Rethink Website Clone",
+    description:
+      "A replica of the Rethink website using HTML, CSS, and JavaScript. Features smooth fade animations using the AOS (Animate On Scroll) library, interactive elements, and responsive layout.",
+    href: "https://github.com/Jayeshpatil9869/Rethink",
+    image: "/images/rethink.png",
+    bgImage: "/images/rethink.png",
+    frameworks: [
+      { id: 1, name: "HTML" },
+      { id: 2, name: "CSS" },
+      { id: 3, name: "JavaScript" },
+      { id: 4, name: "AOS" },
+    ],
+  },
+  {
+    id: 13,
+    name: "Sundown Studio",
+    description:
+      "A visually immersive clone of the Sundown Studio website, featuring smooth scroll animations and high-quality design elements.",
+    href: "https://github.com/Jayeshpatil9869/Sundown-Studio",
+    image: "/images/sundown.png",
+    bgImage: "/images/sundown.png",
+    frameworks: [
+      { id: 1, name: "HTML" },
+      { id: 2, name: "CSS" },
+      { id: 3, name: "JavaScript" },
+      { id: 4, name: "GSAP" },
+    ],
+  },
 ];
 
 export const socials = [
