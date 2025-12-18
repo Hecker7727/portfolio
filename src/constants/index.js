@@ -79,6 +79,20 @@
 // ];
 
 export const projects = [
+  {
+    id: 101,
+    name: "Riyansh Ayurvedic E-Commerce",
+    description:
+      "A premium ayurvedic e-commerce platform offering a range of natural health products. Features a clean, responsive design for a seamless shopping experience.",
+    href: "https://www.riyanshamrit.com/",
+    image: "/images/Riyansh-Ayurvedic-E-Commerce.png",
+    bgImage: "/images/Riyansh-Ayurvedic-E-Commerce.png",
+    frameworks: [
+      { id: 1, name: "React.js" },
+      { id: 2, name: "Tailwind CSS" },
+      { id: 3, name: "E-Commerce" },
+    ],
+  },
   // ---------------- Internship / Private Projects ----------------
   {
     id: 1,

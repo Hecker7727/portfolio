@@ -15,7 +15,7 @@ const App = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate loading progress for Spline scene
+    // Simulate loading progress
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -46,9 +46,8 @@ const App = () => {
         </div>
       )}
       <div
-        className={`${
-          isReady ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-1000`}
+        className={`${isReady ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-1000`}
       >
         <Navbar />
         <Hero />

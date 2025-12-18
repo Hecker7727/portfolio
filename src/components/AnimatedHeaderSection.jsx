@@ -9,7 +9,7 @@ const AnimatedHeaderSection = ({
   text,
   textColor,
   withScrollTrigger = false,
-  titleFontSize = "text-[4rem] sm:text-[3rem] md:text-[10rem]", // default
+  titleFontSize = "text-[5rem] sm:text-[3rem] md:text-[10rem]", // default
 }) => {
   const contextRef = useRef(null);
   const headerRef = useRef(null);
@@ -35,7 +35,7 @@ const AnimatedHeaderSection = ({
           </p>
           <div className="px-3">
             <h1
-              className={`flex flex-col gap-12 uppercase banner-text-responsive ${titleFontSize} sm:gap-16 md:block pb-5 ${textColor}`}
+              className={`flex flex-col gap-12 uppercase font-normal banner-text-responsive ${titleFontSize} sm:gap-16 md:block pb-5 ${textColor}`}
             >
               {titleParts.map((part, index) => (
                 <span key={index}>{part} </span>
