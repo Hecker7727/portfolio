@@ -31,15 +31,19 @@ const Contact = () => {
   }, []);
 
   // Apply magnet effect to social media links
+  // Apply magnet effect to social media links
   useEffect(() => {
-    applyMagnetEffect(".magnet-btn", {
-      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-      duration: 1,
-    });
+    let cleanup;
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      cleanup = applyMagnetEffect(".magnet-btn", {
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+      });
+    }
 
     // Cleanup function
     return () => {
-      // Any cleanup if needed
+      if (cleanup) cleanup();
     };
   }, []);
   return (

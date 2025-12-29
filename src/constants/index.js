@@ -245,6 +245,10 @@ export const projects = [
 ];
 
 export const socials = [
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/jayesh-patil01/" },
+  { name: "GitHub", href: "https://github.com/Jayeshpatil9869" },
+  { name: "WhatsApp", href: "https://wa.me/919209389015" },
+  { name: "Codepen", href: "https://codepen.io/jayeshpatil1553" },
   {
     name: "Instagram",
     href: "https://www.instagram.com/destination_diaries_15/",
@@ -253,8 +257,5 @@ export const socials = [
     name: "Youtube",
     href: "https://www.youtube.com/@Rjarts9869",
   },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/jayesh-patil01/" },
-  { name: "GitHub", href: "https://github.com/Jayeshpatil9869" },
-  { name: "Codepen", href: "https://codepen.io/jayeshpatil1553" },
   { name: "Twitter", href: "https://x.com/Jayeshpatil1553" },
 ];

@@ -88,14 +88,19 @@ const Navbar = () => {
 
   // Apply magnet effect to navigation links and social media links
   useEffect(() => {
-    // Apply only after the menu is opened
-    if (isOpen) {
+    let cleanup;
+    // Apply only after the menu is opened and on non-mobile devices
+    if (isOpen && window.matchMedia("(min-width: 768px)").matches) {
       // Apply to navigation links
-      applyMagnetEffect(".magnet-btn", {
+      cleanup = applyMagnetEffect(".magnet-btn", {
         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
         duration: 1,
       });
     }
+
+    return () => {
+      if (cleanup) cleanup();
+    };
   }, [isOpen]);
 
   const toggleMenu = () => {
@@ -114,19 +119,30 @@ const Navbar = () => {
         ref={navRef}
         className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-24 gap-y-10 md:w-1/2 md:left-1/2"
       >
-        <div className="flex flex-col text-6xl gap-y-2 md:text-6xl lg:text-8xl">
-          {["home", "experience", "about", "work", "contact"].map(
+        <div className="flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-[9vh]">
+          {["home", "experience", "about", "work", "resume", "contact"].map(
             (section, index) => (
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
-                <Link
-                  className="transition-all duration-300 cursor-pointer hover:text-white cursor-hover magnet-btn"
-                  to={`${section}`}
-                  smooth
-                  offset={0}
-                  duration={2000}
-                >
-                  {section}
-                </Link>
+                {section === "resume" ? (
+                  <a
+                    href="/assets/Cv/Jayesh_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-all duration-300 cursor-pointer text-[#cfa355] hover:text-white cursor-hover magnet-btn"
+                  >
+                    {section}
+                  </a>
+                ) : (
+                  <Link
+                    className="transition-all duration-300 cursor-pointer hover:text-white cursor-hover magnet-btn"
+                    to={`${section}`}
+                    smooth
+                    offset={0}
+                    duration={2000}
+                  >
+                    {section}
+                  </Link>
+                )}
               </div>
             )
           )}
