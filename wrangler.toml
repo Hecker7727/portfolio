@@ -1,4 +1,4 @@
-name = "jayesh-portfolio"
+name = "portfolio"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
 compatibility_flags = ["nodejs_compat"]
@@ -6,28 +6,3 @@ compatibility_flags = ["nodejs_compat"]
 [assets]
 directory = "./dist"
 binding = "ASSETS"
-
-[[rules]]
-type = "Text"
-globs = ["**/*.html"]
-fallthrough = true
-
-[[rules]]
-type = "Text"
-globs = ["**/*.css"]
-fallthrough = true
-
-[[rules]]
-type = "Text"
-globs = ["**/*.js"]
-fallthrough = true
-
-[[rules]]
-type = "Text"
-globs = ["**/*.json"]
-fallthrough = true
-
-[[rules]]
-type = "Text"
-globs = ["**/*.txt"]
-fallthrough = true
