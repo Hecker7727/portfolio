@@ -31,6 +31,7 @@ interface ShadowOverlayProps {
     noise?: NoiseConfig;
     style?: CSSProperties;
     className?: string;
+    paused?: boolean;
 }
 
 function mapRange(
@@ -60,10 +61,11 @@ export function Component({
     animation,
     noise,
     style,
-    className
+    className,
+    paused = false
 }: ShadowOverlayProps) {
     const id = useInstanceId();
-    const animationEnabled = animation && animation.scale > 0;
+    const animationEnabled = animation && animation.scale > 0 && !paused;
     const feColorMatrixRef = useRef<SVGFEColorMatrixElement>(null);
     const hueRotateMotionValue = useMotionValue(180);
     const hueRotateAnimation = useRef<AnimationPlaybackControls | null>(null);
@@ -96,6 +98,8 @@ export function Component({
                     hueRotateAnimation.current.stop();
                 }
             };
+        } else if (!animationEnabled && hueRotateAnimation.current) {
+            hueRotateAnimation.current.stop();
         }
     }, [animationEnabled, animationDuration, hueRotateMotionValue]);
 

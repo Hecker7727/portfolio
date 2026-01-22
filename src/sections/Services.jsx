@@ -11,19 +11,31 @@ const Experience = () => {
 
   const experienceData = [
     {
+      title: "Full-stack Developer",
+      company: "Divines Code",
+      period: "Sep 2025 - Present",
+      type: "Nashik, Maharashtra, India",
+      description: "Design and develop full-stack web applications aligned with real business needs.",
+      responsibilities: [
+        "Built responsive and interactive user interfaces using React and modern UI tools",
+        "Developed scalable backend APIs with Node.js, Express, and MongoDB",
+        "Implemented authentication, database-driven features, and performance optimizations",
+        "Contributed to the Divines Code website with enhanced UX, animations, and smooth effects using GSAP & Lenis"
+      ],
+    },
+    {
       title: "Full Stack Developer Intern",
       company: "DigiMirai – Malegaon, Maharashtra",
-      period: "Jul 2025 – Present",
+      period: "Apr 2025 - Sep 2025",
       type: "On-site",
       description: "Working as a full-stack developer intern focusing on web application development and deployment.",
-    responsibilities: [
-  "Built full-stack MERN applications with real-time dashboards",
-  "Enhanced UI/UX with responsive designs and GSAP/Framer animations",
-  "Implemented secure authentication and role-based access",
-  "Integrated APIs and optimized backend performance",
-  "Worked with teams to deliver end-to-end solutions for IPBazaar, Gaushala, and AI Copilot"
-]
-
+      responsibilities: [
+        "Built full-stack MERN applications with real-time dashboards",
+        "Enhanced UI/UX with responsive designs and GSAP/Framer animations",
+        "Implemented secure authentication and role-based access",
+        "Integrated APIs and optimized backend performance",
+        "Worked with teams to deliver end-to-end solutions for IPBazaar, Gaushala, and AI Copilot"
+      ]
 
     }
   ];
@@ -50,13 +62,13 @@ const Experience = () => {
   return (
     <section id="experience" className="min-h-screen bg-black rounded-t-4xl">
       <AnimatedHeaderSection
-  subTitle={"Professional Journey"}
-  title={"Experience"}
-  text={text}
-  textColor={"text-white"}
-  withScrollTrigger={true}
-  titleFontSize="text-5xl sm:text-6xl md:text-[8rem]" // <-- custom size
-/>
+        subTitle={"Professional Journey"}
+        title={"Experience"}
+        text={text}
+        textColor={"text-white"}
+        withScrollTrigger={true}
+        titleFontSize="text-5xl sm:text-6xl md:text-[8rem]" // <-- custom size
+      />
 
       {experienceData.map((experience, index) => (
         <div
@@ -66,9 +78,9 @@ const Experience = () => {
           style={
             isDesktop
               ? {
-                  top: `calc(10vh + ${index * 5}em)`,
-                  marginBottom: `${(experienceData.length - index - 1) * 5}rem`,
-                }
+                top: `calc(10vh + ${index * 5}em)`,
+                marginBottom: `${(experienceData.length - index - 1) * 5}rem`,
+              }
               : { top: 0 }
           }
         >

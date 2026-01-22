@@ -182,11 +182,19 @@ const Works = () => {
                 src={project.bgImage}
                 alt={`${project.name}-bg-image`}
                 className="object-cover w-full h-full rounded-md brightness-50"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="400"
               />
               <img
                 src={project.image}
                 alt={`${project.name}-image`}
                 className="absolute bg-center px-14 rounded-xl portfolio-img"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="340"
               />
             </div>
           </div>
@@ -201,6 +209,9 @@ const Works = () => {
               src={projects[currentIndex].image}
               alt="preview"
               className="object-cover w-full h-full portfolio-img"
+              width="560"
+              height="400"
+              decoding="async"
             />
           )}
         </div>

@@ -3,22 +3,23 @@ import Marquee from "../components/Marquee";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+const items = [
+  "Innovation",
+  "Precision",
+  "Trust",
+  "Collaboration",
+  "Excellence",
+];
+const items2 = [
+  "contact us",
+  "contact us",
+  "contact us",
+  "contact us",
+  "contact us",
+];
+
 const ContactSummary = () => {
   const containerRef = useRef(null);
-  const items = [
-    "Innovation",
-    "Precision",
-    "Trust",
-    "Collaboration",
-    "Excellence",
-  ];
-  const items2 = [
-    "contact us",
-    "contact us",
-    "contact us",
-    "contact us",
-    "contact us",
-  ];
 
   useGSAP(() => {
     gsap.to(containerRef.current, {

@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
-import ServiceSummary from "./sections/ServiceSummary";
-import Services from "./sections/Services";
 import ReactLenis from "lenis/react";
-import About from "./sections/About";
-import Works from "./sections/Works";
-import ContactSummary from "./sections/ContactSummary";
-import Contact from "./sections/Contact";
 import CustomCursor from "./components/CustomCursor";
+
+const ServiceSummary = React.lazy(() => import("./sections/ServiceSummary"));
+const Services = React.lazy(() => import("./sections/Services"));
+const About = React.lazy(() => import("./sections/About"));
+const Works = React.lazy(() => import("./sections/Works"));
+const ContactSummary = React.lazy(() => import("./sections/ContactSummary"));
+const Contact = React.lazy(() => import("./sections/Contact"));
 
 const App = () => {
   const [isReady, setIsReady] = useState(false);
@@ -51,12 +52,14 @@ const App = () => {
       >
         <Navbar />
         <Hero />
-        <ServiceSummary />
-        <Services />
-        <About />
-        <Works />
-        <ContactSummary />
-        <Contact />
+        <Suspense fallback={<div className="min-h-screen bg-black" />}>
+          <ServiceSummary />
+          <Services />
+          <About />
+          <Works />
+          <ContactSummary />
+          <Contact />
+        </Suspense>
         <CustomCursor />
       </div>
     </ReactLenis>

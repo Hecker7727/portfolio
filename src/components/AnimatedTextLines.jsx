@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
-export const AnimatedTextLines = ({ text, className }) => {
+export const AnimatedTextLines = ({ text, className, lineClassName = "" }) => {
   const containerRef = useRef(null);
   const lineRefs = useRef([]);
   const lines = text.split("\n").filter((line) => line.trim() !== "");
@@ -28,7 +28,7 @@ export const AnimatedTextLines = ({ text, className }) => {
         <span
           key={index}
           ref={(el) => (lineRefs.current[index] = el)}
-          className="block leading-relaxed tracking-wide text-pretty"
+          className={`block leading-relaxed tracking-wide text-pretty ${lineClassName}`}
         >
           {line}
         </span>
