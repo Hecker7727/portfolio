@@ -32,5 +32,14 @@ export default defineConfig({
     commonjsOptions: {
       transformMixedEsModules: true,
     },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          gsap: ["gsap", "@gsap/react"],
+          framer: ["framer-motion"],
+        },
+      },
+    },
   },
 });

@@ -8,6 +8,7 @@ const AnimatedHeaderSection = ({
   title,
   text,
   textColor,
+  isMobile = false,
   withScrollTrigger = false,
   titleFontSize = "text-[5rem] sm:text-[3rem] md:text-[10rem]", // default
 }) => {
@@ -18,13 +19,14 @@ const AnimatedHeaderSection = ({
 
   useGSAP(() => {
     const tl = gsap.timeline({
+      delay: isMobile ? 0.5 : 0, // Delay on mobile to prioritize LCP 
       scrollTrigger: withScrollTrigger
         ? { trigger: contextRef.current }
         : undefined,
     });
     tl.from(contextRef.current, { y: "50vh", duration: 1, ease: "circ.out" });
     tl.from(headerRef.current, { opacity: 0, y: "200", duration: 1, ease: "circ.out" }, "<+0.2");
-  }, []);
+  }, [isMobile]);
 
   return (
     <div ref={contextRef}>
