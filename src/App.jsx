@@ -3,6 +3,7 @@ import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import ReactLenis from "lenis/react";
 import CustomCursor from "./components/CustomCursor";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const ServiceSummary = React.lazy(() => import("./sections/ServiceSummary"));
 const Services = React.lazy(() => import("./sections/Services"));
@@ -28,6 +29,7 @@ const App = () => {
           <Contact />
         </Suspense>
         <CustomCursor />
+        <GoogleAnalytics />
       </div>
     </ReactLenis>
   );
