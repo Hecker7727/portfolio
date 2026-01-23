@@ -54,7 +54,7 @@ const ServiceSummary = () => {
         <div className="w-10 h-1 md:w-32 bg-gold" />
         <p className="italic">Frontends</p>
         <div className="w-10 h-1 md:w-32 bg-gold" />
-        <p>Scalability</p>
+        <p className="font-medium">Scalability</p>
       </div>
       <div id="title-service-4" className="translate-x-48">
         <p>Databases</p>

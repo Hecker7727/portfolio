@@ -85,8 +85,8 @@ export const projects = [
     description:
       "A premium ayurvedic e-commerce platform offering a range of natural health products. Features a clean, responsive design for a seamless shopping experience.",
     href: "https://www.riyanshamrit.com/",
-    image: "/images/Riyansh-Ayurvedic-E-Commerce.png",
-    bgImage: "/images/Riyansh-Ayurvedic-E-Commerce.png",
+    image: "/images/Riyansh-Ayurvedic-E-Commerce.jpg",
+    bgImage: "/images/Riyansh-Ayurvedic-E-Commerce.jpg",
     frameworks: [
       { id: 1, name: "React.js" },
       { id: 2, name: "Tailwind CSS" },
@@ -100,8 +100,8 @@ export const projects = [
     description:
       "A charity management system built during my DigiMirai internship. Features included donor tracking, fund allocation, and a transparent dashboard for admins.",
     href: "https://github.com/Jayeshpatil9869/yaseen", // private repo
-    image: "/images/Yaseen-Foundation.png",
-    bgImage: "/images/Yaseen-Foundation.png",
+    image: "/images/Yaseen-Foundation.jpg",
+    bgImage: "/images/Yaseen-Foundation.jpg",
     frameworks: [
       { id: 1, name: "React.js" },
       { id: 2, name: "Node.js" },
@@ -115,8 +115,8 @@ export const projects = [
     description:
       "A web-based management tool for Gaushalas (cow shelters) to handle donations, cattle records, and daily operations with clean data visualization.",
     href: "https://github.com/Jayeshpatil9869/gaushala_project-main", // private repo
-    image: "/images/Gaushala.png",
-    bgImage: "/images/Gaushala.png",
+    image: "/images/Gaushala.jpg",
+    bgImage: "/images/Gaushala.jpg",
     frameworks: [
       { id: 1, name: "React.js" },
       { id: 2, name: "Tailwind CSS" },
@@ -144,8 +144,8 @@ export const projects = [
     description:
       "An AI-powered drag-and-drop image enhancement tool with real-time preview and one-click optimization. Built with performance in mind—lazy loading, asset optimization, and Lighthouse 95+.",
     href: "https://github.com/Jayeshpatil9869/image-enhancer",
-    image: "/images/image-enhancer.png",
-    bgImage: "/images/image-enhancer.png",
+    image: "/images/image-enhancer.jpg",
+    bgImage: "/images/image-enhancer.jpg",
     frameworks: [
       { id: 1, name: "React.js" },
       { id: 2, name: "Tailwind CSS" },
@@ -159,8 +159,8 @@ export const projects = [
     description:
       "A real-time movie search web app featuring modular components, client-side routing, and OMDB API integration—optimized with debounce and caching for improved performance.",
     href: "https://github.com/Jayeshpatil9869/MovieSearch-React-Application",
-    image: "/images/movieDekho.png",
-    bgImage: "/images/movieDekho.png",
+    image: "/images/movieDekho.jpg",
+    bgImage: "/images/movieDekho.jpg",
     frameworks: [
       { id: 1, name: "React.js" },
       { id: 2, name: "Vite" },
@@ -174,8 +174,8 @@ export const projects = [
     description:
       'A "Rejouice" website clone showcasing modern web development techniques with HTML, CSS, JavaScript, and GSAP animations—emphasizing responsive, interactive design.',
     href: "https://github.com/Jayeshpatil9869/Rejouice-Clone",
-    image: "/images/rejouice.png",
-    bgImage: "/images/rejouice.png",
+    image: "/images/rejouice.jpg",
+    bgImage: "/images/rejouice.jpg",
     frameworks: [
       { id: 1, name: "HTML" },
       { id: 2, name: "CSS" },
@@ -189,8 +189,8 @@ export const projects = [
     description:
       "A clone of the Lazarev Agency website that demonstrates modern front-end skills—responsive layouts, visuals, and animations with HTML, CSS, and JavaScript.",
     href: "https://github.com/Jayeshpatil9869/Lazarev",
-    image: "/images/Lazarev.png",
-    bgImage: "/images/Lazarev.png",
+    image: "/images/Lazarev.jpg",
+    bgImage: "/images/Lazarev.jpg",
     frameworks: [
       { id: 1, name: "HTML" },
       { id: 2, name: "CSS" },
@@ -203,8 +203,8 @@ export const projects = [
     description:
       "A modern, responsive clone of the Outpost Design website, showcasing advanced front-end development skills including animations, responsiveness, and sleek UI design.",
     href: "https://github.com/Jayeshpatil9869/Outpost-Project",
-    image: "/images/Outpost.png",
-    bgImage: "/images/Outpost.png",
+    image: "/images/Outpost.jpg",
+    bgImage: "/images/Outpost.jpg",
     frameworks: [
       { id: 1, name: "HTML5" },
       { id: 2, name: "CSS3 & SASS" },
@@ -218,8 +218,8 @@ export const projects = [
     description:
       "A replica of the Rethink website using HTML, CSS, and JavaScript. Features smooth fade animations using the AOS (Animate On Scroll) library, interactive elements, and responsive layout.",
     href: "https://github.com/Jayeshpatil9869/Rethink",
-    image: "/images/rethink.png",
-    bgImage: "/images/rethink.png",
+    image: "/images/rethink.jpg",
+    bgImage: "/images/rethink.jpg",
     frameworks: [
       { id: 1, name: "HTML" },
       { id: 2, name: "CSS" },
@@ -233,8 +233,8 @@ export const projects = [
     description:
       "A visually immersive clone of the Sundown Studio website, featuring smooth scroll animations and high-quality design elements.",
     href: "https://github.com/Jayeshpatil9869/Sundown-Studio",
-    image: "/images/sundown.png",
-    bgImage: "/images/sundown.png",
+    image: "/images/sundown.jpg",
+    bgImage: "/images/sundown.jpg",
     frameworks: [
       { id: 1, name: "HTML" },
       { id: 2, name: "CSS" },

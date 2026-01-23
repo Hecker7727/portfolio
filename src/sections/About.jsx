@@ -49,7 +49,7 @@ I’m driven by continuous improvement and hands-on development, always looking 
       <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-[26px] text-white/80">
         <img
           ref={imgRef}
-          src="images/img3.png"
+          src="images/img3.jpg"
           alt="man"
           className="w-md rounded-3xl"
           loading="lazy"

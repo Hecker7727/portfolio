@@ -45,7 +45,7 @@ give you an unfair advantage`;
               animation={{ scale: 100, speed: 90 }}
               noise={{ opacity: 1, scale: 1.2 }}
               sizing="fill"
-              paused={!inView}
+              paused={!inView || isMobile}
             />
           </Suspense>
         )}

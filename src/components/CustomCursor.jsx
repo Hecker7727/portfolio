@@ -13,6 +13,12 @@ export default function CustomCursor() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Check for mobile/tablet devices
+    const isMobile = window.matchMedia("(max-width: 768px)").matches ||
+      window.matchMedia("(hover: none)").matches;
+
+    if (isMobile) return;
+
     const ctx = canvas.getContext("2d");
 
     // Set canvas size
@@ -45,7 +51,7 @@ export default function CustomCursor() {
     // Draw function
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.lineWidth =3;
+      ctx.lineWidth = 3;
       ctx.shadowColor = "#cfa355";
       // ctx.shadowBlur = 12; // Uncomment for glow effect
 
