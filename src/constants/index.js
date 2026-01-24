@@ -83,7 +83,7 @@ export const projects = [
     id: 101,
     name: "Riyansh Ayurvedic E-Commerce",
     description:
-      "A premium ayurvedic e-commerce platform offering a range of natural health products. Features a clean, responsive design for a seamless shopping experience.",
+      "A React and Tailwind CSS based management system for cow shelters (Gaushalas). Includes modules for tracking cows, donations, staff, and resources with an intuitive dashboard and clean UI design.",
     href: "https://www.riyanshamrit.com/",
     image: "/images/Riyansh-Ayurvedic-E-Commerce.jpg",
     bgImage: "/images/Riyansh-Ayurvedic-E-Commerce.jpg",
@@ -93,13 +93,40 @@ export const projects = [
       { id: 3, name: "E-Commerce" },
     ],
   },
+  {
+    id: 102,
+    name: "Divines Code",
+    description:
+      "Divines Code is a modern digital marketing and development agency website designed to help startups grow their online presence. The platform highlights services such as branding, digital marketing strategies.",
+    href: "#", // No URL provided in request, assuming placeholder or maybe I misread. Re-reading request: No URL for Divines Code in text.
+    image: "/images/divines-code.jpg",
+    bgImage: "/images/divines-code.jpg",
+    frameworks: [
+      { id: 1, name: "HTML" },
+      { id: 2, name: "CSS" },
+      { id: 3, name: "JavaScript" },
+    ],
+  },
+  {
+    id: 103,
+    name: "Tellstar.in",
+    description:
+      "A professionally designed web application built with React and Tailwind CSS, providing an intuitive dashboard experience. The platform focuses on clean UI, responsive design, and structured content delivery.",
+    href: "https://tellstar.in/",
+    image: "/images/tellstar.jpg",
+    bgImage: "/images/tellstar.jpg",
+    frameworks: [
+      { id: 1, name: "React.js" },
+      { id: 2, name: "Tailwind CSS" },
+    ],
+  },
   // ---------------- Internship / Private Projects ----------------
   {
     id: 1,
-    name: "Yaseen Foundation Platform",
+    name: "Yaseen Foundation",
     description:
-      "A charity management system built during my DigiMirai internship. Features included donor tracking, fund allocation, and a transparent dashboard for admins.",
-    href: "https://github.com/Jayeshpatil9869/yaseen", // private repo
+      "Yaseen Global Foundation is a community-driven non-profit organization dedicated to uplifting underprivileged communities through education, healthcare, food distribution, and social welfare programs.",
+    href: "https://www.yaseenglobalfoundation.in/",
     image: "/images/Yaseen-Foundation.jpg",
     bgImage: "/images/Yaseen-Foundation.jpg",
     frameworks: [
@@ -113,8 +140,8 @@ export const projects = [
     id: 3,
     name: "Gaushala Management Dashboard",
     description:
-      "A web-based management tool for Gaushalas (cow shelters) to handle donations, cattle records, and daily operations with clean data visualization.",
-    href: "https://github.com/Jayeshpatil9869/gaushala_project-main", // private repo
+      "A comprehensive management dashboard developed with React and Tailwind CSS for cow shelters (Gaushalas). It enables efficient tracking of cows, donations, staff, and daily resources.",
+    href: "https://github.com/Mahendra111111/Gaushala-Management-System",
     image: "/images/Gaushala.jpg",
     bgImage: "/images/Gaushala.jpg",
     frameworks: [
@@ -123,21 +150,6 @@ export const projects = [
       { id: 3, name: "Supabase" },
     ],
   },
-  // {
-  //   id: 4,
-  //   name: "AI Copilot for Instructors",
-  //   description:
-  //     "An AI-powered assistant for educators that generates quiz questions, lesson summaries, and personalized learning resources in real-time.",
-  //   href: "", // private repo
-  //   image: "/assets/projects/ai-copilot.jpg",
-  //   bgImage: "/assets/backgrounds/ai.jpg",
-  //   frameworks: [
-  //     { id: 1, name: "React.js" },
-  //     { id: 2, name: "Node.js" },
-  //     { id: 3, name: "OpenAI/Gemini API" },
-  //     { id: 4, name: "Tailwind CSS" },
-  //   ],
-  // },
   {
     id: 7,
     name: "Enhancify – AI Image Enhancer",
