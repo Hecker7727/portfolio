@@ -19,19 +19,20 @@ const AnimatedHeaderSection = ({
 
   useGSAP(() => {
     const tl = gsap.timeline({
-      delay: isMobile ? 0.5 : 0, // Delay on mobile to prioritize LCP 
+      delay: isMobile ? 0.1 : 0, // Reduced delay for LCP
       scrollTrigger: withScrollTrigger
         ? { trigger: contextRef.current }
         : undefined,
     });
+    // Use autoAlpha to handle visibility + opacity to prevent flash of unstyled content
     tl.from(contextRef.current, { y: "50vh", duration: 1, ease: "circ.out" });
-    tl.from(headerRef.current, { opacity: 0, y: "200", duration: 1, ease: "circ.out" }, "<+0.2");
+    tl.from(headerRef.current, { autoAlpha: 0, y: "200", duration: 1, ease: "circ.out" }, "<+0.1");
   }, [isMobile]);
 
   return (
     <div ref={contextRef}>
       <div style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}>
-        <div ref={headerRef} className="flex flex-col justify-center gap-12 pt-16 sm:gap-16">
+        <div ref={headerRef} className="flex flex-col justify-center gap-12 pt-16 sm:gap-16 will-change-transform">
           <p className={`text-sm font-light tracking-[0.5rem] uppercase px-10 ${textColor}`}>
             {subTitle}
           </p>

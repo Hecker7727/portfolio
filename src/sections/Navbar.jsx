@@ -128,20 +128,26 @@ const Navbar = () => {
                     href="/assets/Cv/Jayesh_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-all duration-300 cursor-pointer text-[#cfa355] hover:text-white cursor-hover magnet-btn"
+                    className="transition-all duration-300 cursor-pointer text-[#cfa355] hover:text-white cursor-hover magnet-btn block"
                   >
                     {section}
                   </a>
                 ) : (
-                  <Link
-                    className="transition-all duration-300 cursor-pointer hover:text-white cursor-hover magnet-btn"
-                    to={`${section}`}
-                    smooth
-                    offset={0}
-                    duration={2000}
+                  <a
+                    href={`#${section}`}
+                    className="transition-all duration-300 cursor-pointer hover:text-white cursor-hover magnet-btn block"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleMenu(); // Close menu on click
+                      const el = document.getElementById(section);
+                      if (el) {
+                        // Simple smooth scroll fallback if lenis handles it, or native
+                        el.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     {section}
-                  </Link>
+                  </a>
                 )}
               </div>
             )

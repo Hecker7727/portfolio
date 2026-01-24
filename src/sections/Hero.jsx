@@ -14,14 +14,18 @@ const Hero = () => {
   });
 
   useEffect(() => {
-    // Desktop: 100ms (Immediate)
-    // Mobile: 2500ms (Delayed for LCP)
-    const delay = isMobile ? 2500 : 100;
-
-    const timer = setTimeout(() => {
-      setShowBackground(true);
-    }, delay);
-    return () => clearTimeout(timer);
+    if (isMobile) {
+      // Defer heavy animations on mobile until idle or 2.5s fallback
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          setTimeout(() => setShowBackground(true), 2000); // 2s inside idle
+        }, { timeout: 3000 });
+      } else {
+        setTimeout(() => setShowBackground(true), 2500);
+      }
+    } else {
+      setTimeout(() => setShowBackground(true), 100);
+    }
   }, [isMobile]);
 
   const text = `I deliver premium, results-driven 
@@ -30,6 +34,10 @@ give you an unfair advantage`;
 
   return (
     <section ref={ref} id="home" className="flex flex-col justify-end min-h-screen">
+      {/* Visually hidden H1 for immediate LCP and SEO discovery */}
+      <h1 className="sr-only">
+        Jayesh Patil - Full Stack Developer India
+      </h1>
       <AnimatedHeaderSection
         isMobile={isMobile}
         subTitle={"Hello I Am"}

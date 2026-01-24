@@ -140,13 +140,16 @@ const Works = () => {
         onMouseMove={handleMouseMove}
       >
         {projects.map((project, index) => (
-          <div
+          <a
             key={project.id}
             id="project"
-            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0 cursor-hover"
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0 cursor-hover block" // Added block just in case
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
-            onClick={() => handleProjectClick(project.href)}
+            aria-label={`View project ${project.name}`}
           >
             {/* overlay */}
             <div
@@ -197,7 +200,7 @@ const Works = () => {
                 height="340"
               />
             </div>
-          </div>
+          </a>
         ))}
         {/* desktop Flaoting preview image */}
         <div
