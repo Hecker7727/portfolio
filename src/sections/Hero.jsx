@@ -40,10 +40,11 @@ give you an unfair advantage`;
       </h1>
       <AnimatedHeaderSection
         isMobile={isMobile}
-        subTitle={"Hello I Am"}
+        subTitle={"Full Stack MERN Developer"}
         title={"Jayesh Patil"}
         text={text}
         textColor={"text-black"}
+        subTitleClassName="text-sm sm:text-base md:text-lg lg:text-xl font-medium"
       />
       <div className="absolute inset-0 -z-50 w-screen h-screen">
         {showBackground && (
