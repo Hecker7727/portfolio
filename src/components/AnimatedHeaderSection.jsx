@@ -31,7 +31,7 @@ const AnimatedHeaderSection = ({
   }, [isMobile]);
 
   return (
-    <div ref={contextRef}>
+    <header ref={contextRef}>
       <div style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}>
         <div ref={headerRef} className="flex flex-col justify-center gap-12 pt-16 sm:gap-16 will-change-transform">
           <p className={`tracking-[0.5rem] uppercase px-10 ${textColor} ${subTitleClassName}`}>
@@ -40,6 +40,7 @@ const AnimatedHeaderSection = ({
           <div className="px-3">
             <h1
               className={`flex flex-col gap-12 uppercase font-normal banner-text-responsive ${titleFontSize} sm:gap-16 md:block pb-5 ${textColor}`}
+              aria-label={title}
             >
               {titleParts.map((part, index) => (
                 <span key={index}>{part} </span>
@@ -57,7 +58,7 @@ const AnimatedHeaderSection = ({
           />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

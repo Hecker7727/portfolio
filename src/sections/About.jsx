@@ -8,11 +8,9 @@ const About = () => {
   const text = `Passionate about clean architecture
     I build scalable, high-performance solutions
     from prototype to production`;
-  const aboutText = `I’m a Full Stack Developer who builds reliable, scalable web applications with a strong focus on performance and user experience. I work primarily with the MERN stack, developing SaaS platforms, dashboards, and production-ready web apps used by real users.
+  const aboutText = `I am a Full Stack Developer specializing in the MERN stack (MongoDB, Express, React, Node.js). Unlike typical frontend developers, I understand the full application lifecycle—from designing efficient database schemas and secure REST APIs to implementing pixel-perfect, responsive user interfaces.
 
-My approach combines clean frontend design with well-structured backend systems, ensuring that applications are not only visually polished but also secure, maintainable, and scalable. I enjoy solving complex problems, improving workflows, and turning ideas into practical digital products.
-
-I’m driven by continuous improvement and hands-on development, always looking to build better systems and contribute meaningfully to the products I work on.`;
+My focus is on building production-ready software, not just prototypes. I prioritize clean architecture, long-term maintainability, and performance optimization. Whether integrating complex payment gateways or optimizing load times, I write code that solves real business problems and scales with your growth.`;
   const imgRef = useRef(null);
   useGSAP(() => {
     gsap.to("#about", {
@@ -46,7 +44,7 @@ I’m driven by continuous improvement and hands-on development, always looking 
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-[26px] text-white/80">
+      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-[27px] text-white/80">
         <img
           ref={imgRef}
           src="images/img3.jpg"

@@ -29,7 +29,7 @@ const Works = () => {
       ease: "power3.out",
     });
 
-    gsap.from("#project", {
+    gsap.from(".project-item", {
       y: 100,
       opacity: 0,
       delay: 0.5,
@@ -37,7 +37,7 @@ const Works = () => {
       stagger: 0.3,
       ease: "back.out",
       scrollTrigger: {
-        trigger: "#project",
+        trigger: ".project-item",
       },
     });
   }, []);
@@ -142,11 +142,10 @@ const Works = () => {
         {projects.map((project, index) => (
           <a
             key={project.id}
-            id="project"
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0 cursor-hover block" // Added block just in case
+            className="relative flex flex-col gap-1 py-5 cursor-pointer project-item group md:gap-0 cursor-hover block" // Added block just in case
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
             aria-label={`View project ${project.name}`}

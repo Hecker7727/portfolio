@@ -128,14 +128,14 @@ const Navbar = () => {
                     href="/assets/Cv/Jayesh_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-all duration-300 cursor-pointer text-[#cfa355] hover:text-white cursor-hover magnet-btn block"
+                    className="transition-all duration-300 cursor-pointer text-[#cfa355] hover:text-white cursor-hover block"
                   >
                     {section}
                   </a>
                 ) : (
                   <a
                     href={`#${section}`}
-                    className="transition-all duration-300 cursor-pointer hover:text-white cursor-hover magnet-btn block"
+                    className="transition-all duration-300 cursor-pointer hover:text-white cursor-hover block"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleMenu(); // Close menu on click

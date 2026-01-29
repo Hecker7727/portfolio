@@ -28,16 +28,13 @@ const Hero = () => {
     }
   }, [isMobile]);
 
-  const text = `I deliver premium, results-driven 
-web and app experiences that 
-give you an unfair advantage`;
+  const text = `Building Premium Scalable SaaS Platforms &
+Performance-First Web Applications.
+React.js · Node.js · MongoDB · System Architecture`;
 
   return (
     <section ref={ref} id="home" className="flex flex-col justify-end min-h-screen">
-      {/* Visually hidden H1 for immediate LCP and SEO discovery */}
-      <h1 className="sr-only">
-        Jayesh Patil - Full Stack Developer India
-      </h1>
+
       <AnimatedHeaderSection
         isMobile={isMobile}
         subTitle={"Full Stack MERN Developer"}

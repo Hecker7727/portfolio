@@ -58,6 +58,7 @@ const Contact = () => {
           text={text}
           textColor={"text-white"}
           withScrollTrigger={true}
+          titleFontSize="text-5xl sm:text-7xl md:text-[9rem]"
         />
         <div className="flex px-10 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-10">
           <div className="flex flex-col w-full gap-10">
@@ -83,7 +84,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="text-xs leading-loose tracking-wides uppercase md:text-sm hover:text-white/80 transition-colors duration-200 cursor-hover magnet-btn"
+                    className="text-sm leading-loose tracking-wides uppercase md:text-base hover:text-white/80 transition-colors duration-200 cursor-hover magnet-btn"
                   >
                     {"{ "}
                     {social.name}

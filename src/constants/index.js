@@ -98,7 +98,7 @@ export const projects = [
     name: "Divines Code",
     description:
       "Divines Code is a modern digital marketing and development agency website designed to help startups grow their online presence. The platform highlights services such as branding, digital marketing strategies.",
-    href: "#", // No URL provided in request, assuming placeholder or maybe I misread. Re-reading request: No URL for Divines Code in text.
+    href: "https://divinescode.com/", // No URL provided in request, assuming placeholder or maybe I misread. Re-reading request: No URL for Divines Code in text.
     image: "/images/divines-code.jpg",
     bgImage: "/images/divines-code.jpg",
     frameworks: [
@@ -270,4 +270,5 @@ export const socials = [
     href: "https://www.youtube.com/@Rjarts9869",
   },
   { name: "Twitter", href: "https://x.com/Jayeshpatil1553" },
+  { name: "Dev.to", href: "https://dev.to/jayesh_patil" },
 ];
