@@ -125,7 +125,7 @@ const Navbar = () => {
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
                 {section === "resume" ? (
                   <a
-                    href="/assets/Cv/Jayesh_Resume.pdf"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition-all duration-300 cursor-pointer text-[#cfa355] hover:text-white cursor-hover block"
@@ -160,7 +160,7 @@ const Navbar = () => {
           <div className="font-light">
             <p className="tracking-wider text-white/50">E-mail</p>
             <p className="text-[15px] tracking-widest lowercase text-pretty">
-              work@jayeshbpatil.com
+              hello@haresh.dev
             </p>
           </div>
           <div className="font-light">

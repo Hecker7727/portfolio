@@ -1,9 +1,10 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
-import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
+import { Icon } from "@iconify/react";
 import { projects } from "../constants";
-import { useRef, useState, useEffect } from "react";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useEffect, useRef, useState } from "react";
+import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
+import Marquee from "../components/Marquee";
 import { applyImageEffect } from "../utils/sheryEffects";
 
 const Works = () => {

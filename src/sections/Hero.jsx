@@ -10,15 +10,14 @@ const Hero = () => {
   const [showBackground, setShowBackground] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0,
-    rootMargin: "200px 0px 0px 0px", // Keep it active a bit before/after
+    rootMargin: "200px 0px 0px 0px",
   });
 
   useEffect(() => {
     if (isMobile) {
-      // Defer heavy animations on mobile until idle or 2.5s fallback
       if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-          setTimeout(() => setShowBackground(true), 2000); // 2s inside idle
+          setTimeout(() => setShowBackground(true), 2000);
         }, { timeout: 3000 });
       } else {
         setTimeout(() => setShowBackground(true), 2500);
@@ -28,21 +27,24 @@ const Hero = () => {
     }
   }, [isMobile]);
 
-  const text = `Building Premium Scalable SaaS Platforms &
-Performance-First Web Applications.
-React.js · Node.js · MongoDB · System Architecture`;
-
   return (
-    <section ref={ref} id="home" className="flex flex-col justify-end min-h-screen">
-
-      <AnimatedHeaderSection
-        isMobile={isMobile}
-        subTitle={"Full Stack MERN Developer"}
-        title={"Jayesh Patil"}
-        text={text}
-        textColor={"text-black"}
-        subTitleClassName="text-sm sm:text-base md:text-lg lg:text-xl font-medium"
-      />
+    <section
+      ref={ref}
+      id="home"
+      className="relative flex flex-col items-center justify-center w-full min-h-screen pt-20 overflow-hidden bg-white"
+    >
+      <div className="z-10 w-full px-4 sm:px-6 md:px-10 lg:px-20">
+        <AnimatedHeaderSection
+          isMobile={isMobile}
+          subTitle={"BCA Student & Aspiring Full Stack Developer"}
+          title={"Haresh"}
+          text={`Building Interactive Web & Game-Focused Projects.
+Specializing in FiveM Scripting (Lua), Flutter, and AI/ML Integration.
+Based in Madurai, TN · 1st Year BCA · New Horizon College.`}
+          textColor={"text-black"}
+          subTitleClassName="text-sm sm:text-base md:text-lg lg:text-xl font-medium"
+        />
+      </div>
       <div className="absolute inset-0 -z-50 w-screen h-screen">
         {showBackground && (
           <Suspense fallback={null}>

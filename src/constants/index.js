@@ -81,43 +81,45 @@
 export const projects = [
   {
     id: 101,
-    name: "Riyansh Ayurvedic E-Commerce",
+    name: "FiveM QB-Core Resource",
     description:
-      "A React and Tailwind CSS based management system for cow shelters (Gaushalas). Includes modules for tracking cows, donations, staff, and resources with an intuitive dashboard and clean UI design.",
-    href: "https://www.riyanshamrit.com/",
-    image: "/images/Riyansh-Ayurvedic-E-Commerce.jpg",
-    bgImage: "/images/Riyansh-Ayurvedic-E-Commerce.jpg",
+      "A customized, high-performance FiveM script for roleplay servers using QB-Core. Focused on clean Lua code and efficient game-to-NUI logic to minimize FPS impact.",
+    href: "#",
+    image: "/images/fivem-project.jpg",
+    bgImage: "/images/fivem-project.jpg",
     frameworks: [
-      { id: 1, name: "React.js" },
-      { id: 2, name: "Tailwind CSS" },
-      { id: 3, name: "E-Commerce" },
+      { id: 1, name: "Lua" },
+      { id: 2, name: "JavaScript" },
+      { id: 3, name: "NUI/CEF" },
+      { id: 4, name: "QB-Core" },
     ],
   },
   {
     id: 102,
-    name: "Divines Code",
+    name: "Flutter Marketplace App",
     description:
-      "Divines Code is a modern digital marketing and development agency website designed to help startups grow their online presence. The platform highlights services such as branding, digital marketing strategies.",
-    href: "https://divinescode.com/", // No URL provided in request, assuming placeholder or maybe I misread. Re-reading request: No URL for Divines Code in text.
-    image: "/images/divines-code.jpg",
-    bgImage: "/images/divines-code.jpg",
+      "A cross-platform mobile marketplace built with Flutter and Dart. Features real-time state management, product listings, and seamless checkout flows.",
+    href: "#",
+    image: "/images/flutter-marketplace.jpg",
+    bgImage: "/images/flutter-marketplace.jpg",
     frameworks: [
-      { id: 1, name: "HTML" },
-      { id: 2, name: "CSS" },
-      { id: 3, name: "JavaScript" },
+      { id: 1, name: "Dart" },
+      { id: 2, name: "Flutter" },
+      { id: 3, name: "Supabase" },
     ],
   },
   {
     id: 103,
-    name: "Tellstar.in",
+    name: "Multi-Functional Discord Bot",
     description:
-      "A professionally designed web application built with React and Tailwind CSS, providing an intuitive dashboard experience. The platform focuses on clean UI, responsive design, and structured content delivery.",
-    href: "https://tellstar.in/",
-    image: "/images/tellstar.jpg",
-    bgImage: "/images/tellstar.jpg",
+      "A feature-rich Discord bot developed in Python (Discord.py) or JavaScript (Discord.js). Includes moderation tools, economy systems, and API integrations.",
+    href: "#",
+    image: "/images/discord-bot.jpg",
+    bgImage: "/images/discord-bot.jpg",
     frameworks: [
-      { id: 1, name: "React.js" },
-      { id: 2, name: "Tailwind CSS" },
+      { id: 1, name: "Python" },
+      { id: 2, name: "Node.js" },
+      { id: 3, name: "Discord API" },
     ],
   },
   // ---------------- Internship / Private Projects ----------------
@@ -257,18 +259,7 @@ export const projects = [
 ];
 
 export const socials = [
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/jayesh-patil01/" },
-  { name: "GitHub", href: "https://github.com/Jayeshpatil9869" },
-  { name: "WhatsApp", href: "https://wa.me/919209389015" },
-  { name: "Codepen", href: "https://codepen.io/jayeshpatil1553" },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/destination_diaries_15/",
-  },
-  {
-    name: "Youtube",
-    href: "https://www.youtube.com/@Rjarts9869",
-  },
-  { name: "Twitter", href: "https://x.com/Jayeshpatil1553" },
-  { name: "Dev.to", href: "https://dev.to/jayesh_patil" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/haresh/" },
+  { name: "GitHub", href: "https://github.com/haresh" },
+  { name: "Twitter", href: "https://x.com/haresh" },
 ];

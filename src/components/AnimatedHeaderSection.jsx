@@ -1,8 +1,11 @@
-import React from "react";
 import { useRef } from "react";
-import { AnimatedTextLines } from "../components/AnimatedTextLines";
+import { AnimatedTextLines } from "./AnimatedTextLines";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const AnimatedHeaderSection = ({
   subTitle,
   title,
@@ -28,7 +31,7 @@ const AnimatedHeaderSection = ({
     // Use autoAlpha to handle visibility + opacity to prevent flash of unstyled content
     tl.from(contextRef.current, { y: "50vh", duration: 1, ease: "circ.out" });
     tl.from(headerRef.current, { autoAlpha: 0, y: "200", duration: 1, ease: "circ.out" }, "<+0.1");
-  }, [isMobile]);
+  }, [isMobile, withScrollTrigger]);
 
   return (
     <header ref={contextRef}>

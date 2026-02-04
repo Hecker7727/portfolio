@@ -11,32 +11,30 @@ const Experience = () => {
 
   const experienceData = [
     {
-      title: "Full-stack Developer",
-      company: "Divines Code",
-      period: "Sep 2025 - Present",
-      type: "Nashik, Maharashtra, India",
-      description: "Design and develop full-stack web applications aligned with real business needs.",
+      title: "Game UI Architect & FiveM Engineer",
+      company: "Specialized Scripting",
+      period: "2024 - Present",
+      type: "Remote / Open Source",
+      description: "Focusing on immersive, high-performance user interfaces for FiveM roleplay servers.",
       responsibilities: [
-        "Built responsive and interactive user interfaces using React and modern UI tools",
-        "Developed scalable backend APIs with Node.js, Express, and MongoDB",
-        "Implemented authentication, database-driven features, and performance optimizations",
-        "Contributed to the Divines Code website with enhanced UX, animations, and smooth effects using GSAP & Lenis"
+        "Developing custom NUI (Native User Interface) components using React and Vanilla CSS",
+        "Optimizing Lua scripts (QB-Core) to ensure minimal server-side latency and high client-side FPS",
+        "Designing diegetic UI elements that blend seamlessly with the GTA V game world",
+        "Implementing secure Lua-to-JS bridges for complex data handling"
       ],
     },
     {
-      title: "Full Stack Developer Intern",
-      company: "DigiMirai – Malegaon, Maharashtra",
-      period: "Apr 2025 - Sep 2025",
-      type: "On-site",
-      description: "Working as a full-stack developer intern focusing on web application development and deployment.",
+      title: "Full-Stack Web & AI Explorer",
+      company: "MVP Development",
+      period: "2024 - Present",
+      type: "Self-Project Focus",
+      description: "Building production-ready MVPs with modern web stacks and AI integration.",
       responsibilities: [
-        "Built full-stack MERN applications with real-time dashboards",
-        "Enhanced UI/UX with responsive designs and GSAP/Framer animations",
-        "Implemented secure authentication and role-based access",
-        "Integrated APIs and optimized backend performance",
-        "Worked with teams to deliver end-to-end solutions for IPBazaar, Gaushala, and AI Copilot"
+        "Architecting cross-platform mobile apps using Flutter and Dart (e.g., Marketplace prototypes)",
+        "Experimenting with local LLM deployment using Ollama and building AI-driven Discord bots",
+        "Leveraging Supabase and Vercel for scalable, serverless backend solutions",
+        "Contributing to open-source and staying at the forefront of AI and web technologies"
       ]
-
     }
   ];
 

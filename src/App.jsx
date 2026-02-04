@@ -7,9 +7,9 @@ import About from "./sections/About";
 import Works from "./sections/Works";
 import ContactSummary from "./sections/ContactSummary";
 import Contact from "./sections/Contact";
-import ReactLenis from "lenis/react";
+import { ReactLenis } from "lenis/react";
 import CustomCursor from "./components/CustomCursor";
-import GoogleAnalytics from "./components/GoogleAnalytics";
+// import GATracker from "./components/GATracker";
 
 const App = () => {
   return (
@@ -32,7 +32,7 @@ const App = () => {
         <Contact />
 
         <CustomCursor />
-        <GoogleAnalytics />
+        {/* <GATracker /> */}
       </main>
     </ReactLenis>
   );
