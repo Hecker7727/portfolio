@@ -77,18 +77,14 @@ The deployment is handled by GitHub Actions (see `.github/workflows/deploy.yml`)
 ### Cloudflare Pages
 **Live Site**: https://h07.me (via custom domain)
 
-The deployment is handled by GitHub Actions (see `.github/workflows/cloudflare-pages.yml`).
+The deployment is handled by GitHub Actions using Wrangler (see `.github/workflows/cloudflare-pages.yml`).
 
 #### Setup Required for Cloudflare Deployment
-To enable Cloudflare Pages deployment, you need to configure the following secrets in your GitHub repository:
+To enable Cloudflare Pages deployment via Wrangler, you only need to configure one secret:
 
-1. **CLOUDFLARE_API_TOKEN**: 
-   - Go to [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens)
-   - Create a new API token with "Cloudflare Pages: Edit" permissions
-   - Add it as a repository secret
-
-2. **CLOUDFLARE_ACCOUNT_ID**:
-   - Find your Account ID in the Cloudflare Dashboard (right sidebar on any page)
-   - Add it as a repository secret
+**CLOUDFLARE_API_TOKEN**: 
+- Go to [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens)
+- Create a new API token with "Cloudflare Pages: Edit" permissions
+- Add it as a repository secret in GitHub
 
 Both workflows run independently and deploy simultaneously on every push to `main`.

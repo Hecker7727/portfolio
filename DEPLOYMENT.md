@@ -14,9 +14,9 @@ GitHub Pages deployment is configured out-of-the-box. The workflow (`.github/wor
 
 ---
 
-## Cloudflare Pages (Requires Setup)
+## Cloudflare Pages (Using Wrangler)
 
-To enable Cloudflare Pages deployment, you need to configure GitHub Secrets.
+Cloudflare Pages deployment uses Wrangler CLI for a simpler, more streamlined deployment process.
 
 ### Step 1: Get Your Cloudflare API Token
 
@@ -29,47 +29,53 @@ To enable Cloudflare Pages deployment, you need to configure GitHub Secrets.
 5. Click **Continue to Summary** > **Create Token**
 6. Copy the token (you won't be able to see it again!)
 
-### Step 2: Get Your Cloudflare Account ID
-
-1. In the Cloudflare Dashboard, select any website/domain
-2. On the right sidebar (Overview page), find **Account ID**
-3. Copy the Account ID
-
-### Step 3: Add Secrets to GitHub
+### Step 2: Add Secret to GitHub
 
 1. Go to your GitHub repository
 2. Click **Settings** > **Secrets and variables** > **Actions**
 3. Click **New repository secret**
-4. Add these two secrets:
-   - Name: `CLOUDFLARE_API_TOKEN`, Value: (paste your API token)
-   - Name: `CLOUDFLARE_ACCOUNT_ID`, Value: (paste your account ID)
+4. Add this secret:
+   - Name: `CLOUDFLARE_API_TOKEN`
+   - Value: (paste your API token)
 
-### Step 4: Create Cloudflare Pages Project (Optional)
+That's it! The workflow uses Wrangler to automatically deploy to Cloudflare Pages.
 
-You can either:
-- Let the GitHub Action create the project automatically (recommended)
+### Step 3: Verify Wrangler Configuration
+
+The `wrangler.toml` file in the repository root configures Wrangler to:
+- Use the project name "portfolio"
+- Deploy the `./dist` directory as static assets
+- Use Node.js compatibility
+
+No additional configuration is needed!
 - Or manually create a Pages project named `portfolio` in Cloudflare Dashboard
 
-### Step 5: Test the Deployment
+### Step 4: Test the Deployment
 
 1. Push a commit to the `main` branch
 2. Go to **Actions** tab in your GitHub repository
 3. Watch both workflows run:
    - "Deploy static content to Pages" (GitHub Pages)
-   - "Deploy to Cloudflare Pages" (Cloudflare Pages)
+   - "Deploy to Cloudflare Pages" (Cloudflare Pages with Wrangler)
 
 ---
 
 ## Workflow Files
 
 - **`.github/workflows/deploy.yml`** - GitHub Pages deployment
-- **`.github/workflows/cloudflare-pages.yml`** - Cloudflare Pages deployment
+- **`.github/workflows/cloudflare-pages.yml`** - Cloudflare Pages deployment using Wrangler
 
 Both workflows:
 - Run on push to `main` branch
 - Can be manually triggered from the Actions tab
 - Build the project using `npm ci` and `npm run build`
 - Deploy the `dist` directory
+
+### Cloudflare Workflow Details
+The Cloudflare workflow uses the official `cloudflare/wrangler-action@v3` to:
+- Authenticate using your `CLOUDFLARE_API_TOKEN`
+- Run `wrangler pages deploy dist --project-name=portfolio`
+- Deploy to your Cloudflare Pages project
 
 ---
 
@@ -90,8 +96,9 @@ Both workflows:
 ## Troubleshooting
 
 ### Cloudflare deployment fails with authentication error
-- Double-check that `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are correctly set
-- Ensure the API token has the correct permissions
+- Double-check that `CLOUDFLARE_API_TOKEN` is correctly set in GitHub Secrets
+- Ensure the API token has "Cloudflare Pages: Edit" permissions
+- Verify your Wrangler configuration in `wrangler.toml`
 
 ### GitHub Pages deployment fails
 - Verify GitHub Pages is enabled in repository settings
@@ -102,10 +109,16 @@ Both workflows:
 - Ensure `npm ci` and `npm run build` work locally
 - Verify all dependencies are listed in `package.json`
 
+### Wrangler command fails
+- Check that the project name in the workflow matches your Cloudflare Pages project
+- Verify the `dist` directory is created after build
+- Review Wrangler logs in the Actions tab for detailed error messages
+
 ---
 
 ## Additional Resources
 
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Cloudflare Pages Documentation](https://developers.cloudflare.com/pages/)
-- [Cloudflare Pages GitHub Action](https://github.com/cloudflare/pages-action)
+- [Cloudflare Wrangler Action](https://github.com/cloudflare/wrangler-action)
+- [Wrangler CLI Documentation](https://developers.cloudflare.com/workers/wrangler/)
