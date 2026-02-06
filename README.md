@@ -69,6 +69,6 @@ npm run dev
 
 This portfolio is configured to automatically deploy to GitHub Pages. On every push to the `main` branch, the site will be built and deployed.
 
-**Live Site**: https://hecker7727.github.io/portfolio/
+**Live Site**: https://hecker7727.github.io/
 
 The deployment is handled by GitHub Actions (see `.github/workflows/deploy.yml`).
