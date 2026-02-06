@@ -67,8 +67,28 @@ npm run dev
 
 ## 🚀 Deployment
 
-This portfolio is configured to automatically deploy to GitHub Pages. On every push to the `main` branch, the site will be built and deployed.
+This portfolio is configured to automatically deploy to **both GitHub Pages and Cloudflare Pages**. On every push to the `main` branch, the site will be built and deployed to both platforms.
 
+### GitHub Pages
 **Live Site**: https://hecker7727.github.io/
 
 The deployment is handled by GitHub Actions (see `.github/workflows/deploy.yml`).
+
+### Cloudflare Pages
+**Live Site**: https://h07.me (via custom domain)
+
+The deployment is handled by GitHub Actions (see `.github/workflows/cloudflare-pages.yml`).
+
+#### Setup Required for Cloudflare Deployment
+To enable Cloudflare Pages deployment, you need to configure the following secrets in your GitHub repository:
+
+1. **CLOUDFLARE_API_TOKEN**: 
+   - Go to [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens)
+   - Create a new API token with "Cloudflare Pages: Edit" permissions
+   - Add it as a repository secret
+
+2. **CLOUDFLARE_ACCOUNT_ID**:
+   - Find your Account ID in the Cloudflare Dashboard (right sidebar on any page)
+   - Add it as a repository secret
+
+Both workflows run independently and deploy simultaneously on every push to `main`.
