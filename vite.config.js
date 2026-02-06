@@ -21,6 +21,7 @@ function glslPlugin() {
 }
 
 export default defineConfig({
+  base: '/',
   plugins: [tailwindcss(), react(), glslPlugin()],
   resolve: {
     alias: {
